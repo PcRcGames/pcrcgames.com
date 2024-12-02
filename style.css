@@ -4,8 +4,9 @@ body {
 }
 
 p {
-    margin: -2rem;
+    margin: 0;
     padding: 0;
+    line-height: 8vw;
     color: #424769;
 
     font-size: 10vw;
@@ -13,7 +14,8 @@ p {
 }
 
 main > p:first-child {
-    letter-spacing: 1rem;
+    letter-spacing: 2.3vw;
+    padding-left: 2.3vw;
 }
 
 main {
