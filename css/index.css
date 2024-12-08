@@ -1,29 +1,46 @@
+html {
+    height: 100vh;
+    overflow: hidden;
+}
+
 body {
     margin: 0px;
-    overflow-x: hidden;
 
     background: rgb(14,14,12);
     background: linear-gradient(180deg, rgba(14,14,12,1) 0%, rgba(38,39,34,1) 100%);
 
     user-select: none;
+    overflow-y: scroll;
+
+    scroll-snap-type: y mandatory;
+    height: 100vh;
 }
 
-#containter-div {
+body > * {
+
     display: flex;
     flex-direction: column;
+
+    scroll-snap-align: start;
+    height: 100vh;
+    position: relative;
 }
 
 /* header */
 
 header {
     background: url("../images/background.jpg");
-    background-size: 100vw 100vh;
-
-    width: 100vw;
+    background-size: cover;
+    width: 99vw;
     height: 100vh;
 }
 
-header img {
+header #mountain-div {
+
+    background-image: url("../images/mountain.png");
+    background-size: cover;
+    background-position: center;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -31,16 +48,16 @@ header img {
     margin: 0;
     padding: 0;
 
-    width: 100vw;
     height: 100vh;
-    z-index: 1;
+    width: 99vw;
+    z-index: 10;
 }
 
 h1 {
     position: sticky;
     top: 30%;
     text-align: center;
-    width: 100vw;
+    width: 99vw;
 
     font-size: 3vw;
 
@@ -56,9 +73,10 @@ h1 {
 
 main {
     height: 100vh;
-    width: 100vw;
+    width: 99vw;
 
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -71,4 +89,20 @@ main > a, a > img {
 
 main > a:hover {
     transform: translateY(5%);
+}
+
+@media only screen and (max-width: 600px) {
+    
+    header h1 {
+        font-size: 15vw;
+    }
+
+    main {
+        flex-direction: column;
+        row-gap: 20vh;
+    }
+
+    main > a, a > img {
+        width: 60vw;
+    }
 }
