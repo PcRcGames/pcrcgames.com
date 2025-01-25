@@ -1,0 +1,57 @@
+.prettyprint {
+    background-color: #1e1e1e;
+    border: none !important;
+
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px #131313;
+
+    width: fit-content;
+    max-width: 70%;
+    padding: 1rem 3rem !important;
+
+    text-wrap: wrap;
+    font-size: larger;
+}
+
+.linenums li {
+    list-style-type: decimal !important;
+    background-color: #ffffff00 !important;
+    padding: 0 2rem;
+    color: gray;
+}
+
+.prettyprint .pln {
+    color: #9cdcfa;
+}
+
+.prettyprint .typ {
+    color: #49c9a9;
+}
+
+.prettyprint .kwd {
+    color: #4e9cd2;
+}
+
+.prettyprint .str {
+    color: #c88568;
+}
+
+.prettyprint .pun {
+    color: #dcdcd6;
+}
+
+.prettyprint .lit {
+    color: #9dcea8;
+}
+
+.prettyprint .com {
+    color: #53a64a;
+}
+
+.prettyprint .for .kwd  {
+    color: #d89fd1;
+}
+
+.prettyprint .var .typ  {
+    color: #559cd5;
+}
