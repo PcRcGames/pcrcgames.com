@@ -73,8 +73,7 @@ function openForm(dataRow) {
                     <option value="float">float</option>
                     <option value="string">string</option>
                 </select>
-            </div>
-        `
+            </div>`
     }
 
     importantForm.style.visibility = "visible";
@@ -88,8 +87,7 @@ function generate(texts) {
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
-using System;
-    </pre>`
+using System;</pre>`
 
     outputDiv.innerHTML += "<h2>#Beolvasás - tömb generálása</h2>"
     
@@ -114,8 +112,7 @@ namespace ${namespace.value}
 
         }
     }
-}
-    </pre>`
+}</pre>`
 
     outputDiv.innerHTML += "<h2># Struct létrehozása</h2>"
 
@@ -129,8 +126,7 @@ ${texts[4][0]}${texts[4][1]}${texts[4][2]}
     {
 ${texts[2]}
     }
-}
-    </pre>`
+}</pre>`
 
     let script = document.createElement("script");
     script.src = "./prettify/prettify.js";
