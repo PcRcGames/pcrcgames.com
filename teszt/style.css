@@ -1,0 +1,125 @@
+body {
+    background-color: rgb(17, 31, 46);
+}
+
+#labyrinth-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 80vh;
+    width: 80vh;
+    aspect-ratio: 1/1;
+
+    display: grid;
+}
+
+#labyrinth-div > div {
+    position: relative;
+ 
+    width: 103%;
+    height: 103%;
+}
+
+#labyrinth-div > div > div {
+    position: absolute;
+    display: none;
+
+    width: 80%;
+    height: 65%;
+
+    top: 0;
+    left: 50%;
+
+    z-index: 1;
+    background-color: rgb(34, 69, 121); 
+
+    transform-origin: center !important; 
+}
+
+.top-div, .bottom-div {
+    width: 65% !important;
+    height: 80% !important;
+
+    transform: translateX(-50%);
+
+    animation-name: load-one;
+    animation-duration: 0.25s;
+}
+
+.top-div {
+    border-radius: 0 0 50% 50%;
+}
+
+.bottom-div {
+    top: auto !important;
+    bottom: 0;
+
+    border-radius: 50% 50% 0 0;
+}
+
+.left-div {
+    transform: translate(0, -50%) !important;
+    top: 50% !important;
+    left: 0 !important;
+
+    border-radius: 0 50% 50% 0;
+}
+
+.right-div {
+    transform: translate(0, -50%) !important;
+    top: 50% !important;
+    left: auto !important;
+    right: 0;
+
+    border-radius: 50% 0 0 50%;
+}
+
+.right-div, .left-div {
+    animation-name: load-two;
+    animation-duration: 0.25s;
+}
+
+@keyframes load-one {
+
+    0% {
+        transform: scale(0, 0) translateX(-50%);
+    } 
+    
+    100% {
+        transform: scale(100%, 100%) translateX(-50%);
+    }
+}
+
+.path-div > div {
+    background-color: rgb(152, 86, 16) !important;
+}
+
+@keyframes load-two {
+
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+}
+
+/*
+
+.top {
+    border-top: 1px solid rgb(26, 49, 73) !important;
+}
+
+.bottom {
+    border-bottom: 1px solid rgb(26, 49, 73) !important;
+}
+
+.left {
+    border-left: 1px solid rgb(26, 49, 73) !important;
+}
+
+.right {
+    border-right: 1px solid rgb(26, 49, 73) !important;
+}
+
+*/
