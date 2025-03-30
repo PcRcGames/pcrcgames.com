@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chess.css">
+    <script src="chess.js"></script>
+    <title>chess</title>
+</head>
+<body>
+    <div id="chess_board">
+        
+        <div class="c_even"></div>
+        <div class="d_even">A</div>
+        <div class="d_odd">B</div>
+        <div class="d_even">C</div>
+        <div class="d_odd">D</div>
+        <div class="d_even">E</div>
+        <div class="d_odd">F</div>
+        <div class="d_even">G</div>
+        <div class="d_odd">H</div>
+        <div class="c_odd"></div>
+        
+        <div class="l_even">8</div>
+        <div class="odd" id="18" onclick="move('18')"><object data="images/b_rook.png" class="pieces" id="b_lrook" onclick="select('b_lrook')"></object></div>
+        <div class="even" id="28" onclick="move('28')"><object data="images/b_knight.png" class="pieces" id="b_lknight" onclick="select('b_lknight')"></object></div>
+        <div class="odd" id="38" onclick="move('38')"><object data="images/b_bishop.png" class="pieces" id="b_lbishop" onclick="select('b_lbishop')"></object></div>
+        <div class="even" id="48" onclick="move('48')"><object data="images/b_queen.png" class="pieces" id="b_queen" onclick="select('b_queen')"></object></div>
+        <div class="odd" id="58" onclick="move('58')"><object data="images/b_king.png" class="pieces" id="b_king" onclick="select('b_king')"></object></div>
+        <div class="even" id="68" onclick="move('68')"><object data="images/b_bishop.png" class="pieces" id="b_rbishop" onclick="select('b_rbishop')"></object></div>
+        <div class="odd" id="78" onclick="move('78')"><object data="images/b_knight.png" class="pieces" id="b_rknight" onclick="select('b_rknight')"></object></div>
+        <div class="even" id="88" onclick="move('88')"><object data="images/b_rook.png" class="pieces" id="b_rrook" onclick="select('b_rrook')"></object></div>
+        <div class="l_odd">8</div>
+
+        <div class="l_odd">7</div>
+        <div class="even" id="17" onclick="move('17')"><object data="images/b_pawn.png" class="pieces" id="b_pawn1" onclick="select('b_pawn1')"></object></div>
+        <div class="odd" id="27" onclick="move('27')"><object data="images/b_pawn.png" class="pieces" id="b_pawn2" onclick="select('b_pawn2')"></object></div>
+        <div class="even" id="37" onclick="move('37')"><object data="images/b_pawn.png" class="pieces" id="b_pawn3" onclick="select('b_pawn3')"></object></div>
+        <div class="odd" id="47" onclick="move('47')"><object data="images/b_pawn.png" class="pieces" id="b_pawn4" onclick="select('b_pawn4')"></object></div>
+        <div class="even" id="57" onclick="move('57')"><object data="images/b_pawn.png" class="pieces" id="b_pawn5" onclick="select('b_pawn5')"></object></div>
+        <div class="odd" id="67" onclick="move('67')"><object data="images/b_pawn.png" class="pieces" id="b_pawn6" onclick="select('b_pawn6')"></object></div>
+        <div class="even" id="77" onclick="move('77')"><object data="images/b_pawn.png" class="pieces" id="b_pawn7" onclick="select('b_pawn7')"></object></div>
+        <div class="odd" id="87" onclick="move('87')"><object data="images/b_pawn.png" class="pieces" id="b_pawn8" onclick="select('b_pawn8')"></object></div>
+        <div class="l_even">7</div>
+
+        <div class="l_even">6</div>
+        <div class="odd" id="16" onclick="move('16')"></div>
+        <div class="even" id="26" onclick="move('26')"></div>
+        <div class="odd" id="36" onclick="move('36')"></div>
+        <div class="even" id="46" onclick="move('46')"></div>
+        <div class="odd" id="56" onclick="move('56')"></div>
+        <div class="even" id="66" onclick="move('66')"></div>
+        <div class="odd" id="76" onclick="move('76')"></div>
+        <div class="even" id="86" onclick="move('86')"></div>
+        <div class="l_odd">6</div>
+
+        <div class="l_odd">5</div>
+        <div class="even" id="15" onclick="move('15')"></div>
+        <div class="odd" id="25" onclick="move('25')"></div>
+        <div class="even" id="35" onclick="move('35')"></div>
+        <div class="odd" id="45" onclick="move('45')"></div>
+        <div class="even" id="55" onclick="move('55')"></div>
+        <div class="odd" id="65" onclick="move('65')"></div>
+        <div class="even" id="75" onclick="move('75')"></div>
+        <div class="odd" id="85" onclick="move('85')"></div>
+        <div class="l_even">5</div>
+
+        <div class="l_even">4</div>
+        <div class="odd" id="14" onclick="move('14')"></div>
+        <div class="even" id="24" onclick="move('24')"></div>
+        <div class="odd" id="34" onclick="move('34')"></div>
+        <div class="even" id="44" onclick="move('44')"></div>
+        <div class="odd" id="54" onclick="move('54')"></div>
+        <div class="even" id="64" onclick="move('64')"></div>
+        <div class="odd" id="74" onclick="move('74')"></div>
+        <div class="even" id="84" onclick="move('84')"></div>
+        <div class="l_odd">4</div>
+
+        <div class="l_odd">3</div>
+        <div class="even" id="13" onclick="move('13')"></div>
+        <div class="odd" id="23" onclick="move('23')"></div>
+        <div class="even" id="33" onclick="move('33')"></div>
+        <div class="odd" id="43" onclick="move('43')"></div>
+        <div class="even" id="53" onclick="move('53')"></div>
+        <div class="odd" id="63" onclick="move('63')"></div>
+        <div class="even" id="73" onclick="move('73')"></div>
+        <div class="odd" id="83" onclick="move('83')"></div>
+        <div class="l_even">3</div>
+
+        <div class="l_even">2</div>
+        <div class="odd" id="12" onclick="move('12')"><object data="images/w_pawn.png" class="pieces" id="w_pawn1" onclick="select('w_pawn1')"></object></div>
+        <div class="even" id="22" onclick="move('22')"><object data="images/w_pawn.png" class="pieces" id="w_pawn2" onclick="select('w_pawn2')"></object></div>
+        <div class="odd" id="32" onclick="move('32')"><object data="images/w_pawn.png" class="pieces" id="w_pawn3" onclick="select('w_pawn3')"></object></div>
+        <div class="even" id="42" onclick="move('42')"><object data="images/w_pawn.png" class="pieces" id="w_pawn4" onclick="select('w_pawn4')"></object></div>
+        <div class="odd" id="52" onclick="move('52')"><object data="images/w_pawn.png" class="pieces" id="w_pawn5" onclick="select('w_pawn5')"></object></div>
+        <div class="even" id="62" onclick="move('62')"><object data="images/w_pawn.png" class="pieces" id="w_pawn6" onclick="select('w_pawn6')"></object></div>
+        <div class="odd" id="72" onclick="move('72')"><object data="images/w_pawn.png" class="pieces" id="w_pawn7" onclick="select('w_pawn7')"></object></div>
+        <div class="even" id="82" onclick="move('82')"><object data="images/w_pawn.png" class="pieces" id="w_pawn8" onclick="select('w_pawn8')"></object></div>
+        <div class="l_odd">2</div>
+
+        <div class="l_odd">1</div>
+        <div class="even" id="11" onclick="move('11')"><object data="images/w_rook.png" class="pieces" id="w_lrook" onclick="select('w_lrook')"></object></div>
+        <div class="odd" id="21" onclick="move('21')"><object data="images/w_knight.png" class="pieces" id="w_lknight" onclick="select('w_lknight')"></object></div>
+        <div class="even" id="31" onclick="move('31')"><object data="images/w_bishop.png" class="pieces" id="w_lbishop" onclick="select('w_lbishop')"></object></div>
+        <div class="odd" id="41" onclick="move('41')"><object data="images/w_queen.png" class="pieces" id="w_queen" onclick="select('w_queen')"></object></div>
+        <div class="even" id="51" onclick="move('51')"><object data="images/w_king.png" class="pieces" id="w_king" onclick="select('w_king')"></object></div>
+        <div class="odd" id="61" onclick="move('61')"><object data="images/w_bishop.png" class="pieces" id="w_rbishop" onclick="select('w_rbishop')"></object></div>
+        <div class="even" id="71" onclick="move('71')"><object data="images/w_knight.png" class="pieces" id="w_rknight" onclick="select('w_rknight')"></object></div>
+        <div class="odd" id="81" onclick="move('81')"><object data="images/w_rook.png" class="pieces" id="w_rrook" onclick="select('w_rrook')"></object></div>
+        <div class="l_even">1</div>
+        
+        <div class="c_odd"></div>
+        <div class="d_odd">A</div>
+        <div class="d_even">B</div>
+        <div class="d_odd">C</div>
+        <div class="d_even">D</div>
+        <div class="d_odd">E</div>
+        <div class="d_even">F</div>
+        <div class="d_odd">G</div>
+        <div class="d_even">H</div>
+        <div class="c_even"></div>
+        
+
+    </div>
+</body>
+</html>

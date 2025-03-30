@@ -47,17 +47,14 @@ for (let i = 0; i < cells.length; i++) {
 //console.log(sets);
 
 function generateLabyrinth() {
-
     while (sets.length > 1) {
-
         let firstSet = sets[Math.floor(Math.random() * sets.length)];
         var firstPoint = Array.from(firstSet)[Math.floor(Math.random() * firstSet.size)];
 
         let found = false
-
         for (let i = 0; i < sets.length; i++) {
-
             if (found) break;
+
             for (let e = 0; e < Array.from(sets[i]).length; e++) {
                 if (Array.from(sets[i])[e].x == firstPoint.x - 1 && Array.from(sets[i])[e].y == firstPoint.y) {
                     var secondSet = sets[i]
@@ -102,7 +99,6 @@ function generateLabyrinth() {
 
         if (!found) continue
         else {
-
             if (firstPoint.y == secondPoint.y) {
                 if (firstPoint.x > secondPoint.x) {
                     firstPoint.directions.push("left-div")
@@ -123,21 +119,15 @@ function generateLabyrinth() {
 
             setTimeout(visualize.bind(null, firstPoint, secondPoint), time += speed)
 
-
             let newSet = firstSet.union(secondSet)
             sets.splice(sets.indexOf(firstSet), 1)
             sets.splice(sets.indexOf(secondSet), 1)
             sets.push(newSet)
         }
-
-        //break;
-
     }
-        
 }
 
 function visualize(aPoint, bPoint) {
-    
     aPoint.directions.forEach(dir => {
         aPoint.div.querySelector(`.${dir}`).style.display = "block"
         aPoint.div.classList.add(dir.slice(0, dir.length - 4))
@@ -150,11 +140,19 @@ function visualize(aPoint, bPoint) {
 }
 
 function getPoint(element) {
-
     if (!startCell) startCell = cells.find(x => x.div == element);
     else if (!endCell) {
         endCell = cells.find(x => x.div == element);
+        document.querySelectorAll(".path-div").forEach((div) => {
+            div.classList.remove("path-div")
+        })
+
         pathfinding()
+    }
+    else {
+        startCell = cells.find(x => x.div == element);
+        endCell = null
+        testedCells = [];
     }
 }
 
@@ -170,12 +168,7 @@ function pathfinding() {
         if (nCells.length > 0) {
             path.push(nCells[0]);
             testedCells.push(nCells[0]);
-            //nCells[0].div.classList.add("path-div");
-        
-        } else {
-            path.pop()
-            //path.pop().div.classList.remove("path-div");
-        }
+        } else path.pop()
         
         if (path[path.length - 1] == endCell) break;
     }
@@ -188,7 +181,6 @@ function pathfinding() {
 }
 
 function nearCells(cell) {
-
     let nearCells = new Array();
     if (cell.directions.includes("bottom-div") && !testedCells.includes(cells.find(c => c.x == cell.x && c.y == cell.y + 1))) nearCells.push(cells.find(c => c.x == cell.x && c.y == cell.y + 1))
     if (cell.directions.includes("top-div") && !testedCells.includes(cells.find(c => c.x == cell.x && c.y == cell.y - 1))) nearCells.push(cells.find(c => c.x == cell.x && c.y == cell.y - 1))
@@ -196,5 +188,5 @@ function nearCells(cell) {
     if (cell.directions.includes("right-div") && !testedCells.includes(cells.find(c => c.x == cell.x + 1 && c.y == cell.y))) nearCells.push(cells.find(c => c.x == cell.x + 1 && c.y == cell.y))
     return(nearCells)
 }
- 
+
 generateLabyrinth()
