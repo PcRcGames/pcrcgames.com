@@ -1,108 +1,37 @@
-html {
-    height: 100vh;
-    overflow: hidden;
-}
-
 body {
-    margin: 0px;
-
-    background: rgb(14,14,12);
-    background: linear-gradient(180deg, rgba(14,14,12,1) 0%, rgba(38,39,34,1) 100%);
-
-    user-select: none;
-    overflow-y: scroll;
-
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-}
-
-body > * {
-
-    display: flex;
-    flex-direction: column;
-
-    scroll-snap-align: start;
-    height: 100vh;
-    position: relative;
-}
-
-/* header */
-
-header {
-    background: url("../images/background.jpg");
-    background-size: cover;
-    width: 99vw;
-    height: 100vh;
-}
-
-header #mountain-div {
-
-    background-image: url("../images/mountain.png");
-    background-size: cover;
-    background-position: center;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    
     margin: 0;
-    padding: 0;
+    background-color: #333446;
+    color: #b0647c;
 
-    height: 100vh;
-    width: 99vw;
-    z-index: 10;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
 }
 
-h1 {
-    position: sticky;
-    top: 30%;
-    text-align: center;
-    width: 99vw;
-
-    font-size: 3vw;
-
-    color: #252523;
-
-    font-family: "Caveat", cursive;
-    font-weight: 700;
-
-    letter-spacing: 0.1vw;
-}
-
-/* main */
-
-main {
-    height: 100vh;
-    width: 99vw;
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+
     justify-content: center;
-    align-items: center;
-
-    gap: 10vw;
 }
 
-main > a, a > img {
-    width: 20vw;
+img {
+    border-radius: 25%;
+    margin: 2rem;
+
+    box-shadow: 1rem 1rem 15px #13131a;
+    transition: .5s box-shadow, .75s transform;
 }
 
-main > a:hover {
-    transform: translateY(5%);
+img:hover {
+    box-shadow: 0.5rem 0.5rem 15px #13131a;
+    transform: translateY(1rem);
 }
 
-@media only screen and (max-width: 600px) {
-    
-    header h1 {
-        font-size: 15vw;
-    }
-
-    main {
-        flex-direction: column;
-        row-gap: 20vh;
-    }
-
-    main > a, a > img {
-        width: 60vw;
-    }
+a {
+    -webkit-tap-highlight-color: transparent;
 }
