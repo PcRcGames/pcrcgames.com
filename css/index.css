@@ -2,8 +2,6 @@ body {
     margin: 0;
     background-color: #333446;
     color: #b0647c;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none;
 }
 
@@ -12,17 +10,14 @@ div {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
 }
 
 img {
     border-radius: 25%;
     height: 80%;
-
     box-shadow: 1rem 1rem 15px #13131a;
     transition: .5s box-shadow, .75s transform;
 }
